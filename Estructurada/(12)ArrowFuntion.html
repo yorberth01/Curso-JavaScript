@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Curso JavaScript</title>
+</head>
+
+<body>
+  <h1>Fundamentos JavaScript</h1>
+  <script>
+    //ARROW FUNCTION
+
+    const saludo = function () {
+      console.log("Hola");
+    }
+    saludo();
+
+    const saludar = () => {//si la funcion tiene una sola linea se puede escribir sin llaves: const saludar = () => console.log("Hola");
+      console.log("Hola");
+    }
+    saludar();
+
+    const saludos = nombre => {//cuando una funcion recive un solo parametros no es necesario poner: () perono recive o si recive 2 o mas si es necesario
+      console.log(`Hola ${nombre}`);
+    }
+    saludos("Yorberth");
+
+    const sumar = function (a, b) {
+      return a + b;
+    }
+    console.log(sumar(6, 9));
+
+    const sumar1 = (a, b) => a + b; //el arrow functio es un return explicito no requiere return
+    console.log(sumar1(9, 9));
+
+    const funcionDeVariasLineas = () => {//cuando se tiene mas de una linea se tiene que poner obligatoriamente los {}
+      console.log("Uno");
+      console.log("Dos");
+      console.log("Tres");
+    }
+    funcionDeVariasLineas();
+
+    const numeros = [1, 2, 3, 4, 5];
+    numeros.forEach(function (elemento, posicion) {
+      console.log(`el elemto es:  ${elemento} y la posicion es: ${posicion}`)
+    })
+
+    const numeros1 = [9, 8, 7, 6, 5];
+    numeros1.forEach((elemento, posicion) => {
+      console.log(`${elemento} esta en la posicion: ${posicion}`)
+    })
+
+    //this con arrow funcion
+    const perro = {
+      nombre: "firulay",
+      ladra: function () {
+        console.log(this);// este this devuelve todo el objeto
+      }
+    }
+    perro.ladra();
+
+    const perro1 = {
+      nombre: "serbero",
+      ladra: () => {//por esto hay que tener cuidado al usar => en objetos literales no es buena practica usar en => dentro de un objeto literal
+        console.log(this);
+      }
+    }
+    perro1.ladra();
+
+    const perro2 = {
+      nombre: "serbero",
+      ladra() {//esta es la mejor forma de hacerlo
+        console.log(this);
+      }
+    }
+    perro2.ladra();
+  </script>
+</body>
+
+</html>

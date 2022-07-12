@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Curso JavaScript</title>
+</head>
+
+<body>
+  <h1>Fundamentos JavaScript</h1>
+  <script>
+    //PARAMETROS REST & OPERADOR SPREAD
+    function sumar(a, b, ...c) {//los 3 puntos significa que no se sabe cuantos parametros se van a pasar
+      let resultado = a + b;
+
+      c.forEach(function (n) {
+        resultado += n;
+      });
+      return resultado;
+
+    }
+    console.log(sumar(1, 2));
+    console.log(sumar(1, 2, 3, 4, 5, 6, 7, 8));
+
+    const array1 = [1, 2, 3, 4, 5], array2 = [6, 7, 8, 9, 0];
+    console.log(array1, array2);
+
+    const array3 = [array1, array2];
+    const array4 = [...array1, ...array2];
+    console.log(array3);
+    console.log(array4);
+
+  </script>
+</body>
+
+</html>

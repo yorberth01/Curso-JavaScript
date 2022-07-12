@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Curso JavaScript</title>
+</head>
+
+<body>
+  <h1>Fundamentos JavaScript</h1>
+  <script>
+    //OBJETOS
+    //dentro de un odjeto a las variables se les llama atributos y a las funciones metodos
+    const yorberth = {
+      nombre: "yorberth",
+      apellido: "quiroz",
+      edad: 21,
+      pasatiempo: ["hacer ejercicio", "comer", "jugar poker"],
+      contacto: {
+        correo: "yorberth@gmail.com",
+        tlf: "04264108507",
+      },
+      saludar: function () {
+        console.log("Hola :)")
+      },
+      decirMiNombre: function () {
+        console.log(`Hola mi nombre es: ${this.nombre} ${this.apellido} y tengo ${this.edad} años y mi correo es: ${this.contacto.correo}`)
+      }
+    }
+    console.log(yorberth);
+    console.log(yorberth["nombre"]);
+    console.log(yorberth.nombre);
+    console.log(yorberth.pasatiempo[2]);
+    console.log(yorberth.contacto.correo);
+    yorberth.saludar();
+    yorberth.decirMiNombre();
+
+    //metodos de los objetos
+    console.log(Object.keys(yorberth));
+    console.log(Object.values(yorberth));
+  </script>
+</body>
+
+</html>

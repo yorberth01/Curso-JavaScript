@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Curso JavaScript</title>
+</head>
+
+<body>
+
+  <h1>Fundamentos JavaScript</h1>
+  <script>
+
+
+
+
+
+    let a = "hola", b = "ponertodoen mayuculas";
+    console.log(a.length, b.toLowerCase());//propiedad length para ver cuatos caracteres tiene , toUpperCase pone todo en mayuculas y toLowerCase en minusculas
+
+    let lorem = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias at assumenda repellendus eveniet natus necessitatibus, voluptates temporibus consequuntur amet eligendi, perferendis, placeat architecto.Necessitatibus sapiente aspernatur odio rem cumque officiis!"
+
+    let objeto = {
+      nombre: "yorberth",
+      edad: 12
+    }
+    console.log(objeto);
+
+    let colores = ["azul", "blanco", "negro"];
+    console.log(colores);
+
+    objeto.correo = "yorberth@gmail.com";
+    colores.push("amarillo");
+    console.log(objeto, colores, lorem.includes("amet"), lorem.split(" "), lorem.split(","));//atributo split sirve para convertir u texto en un array
+
+
+    let nombre1 = 'yorberth'
+    let apellido1 = 'quiroz'
+    console.log(`mi nombre completo es ${nombre1} ${apellido1}`)//concatenacion
+  </script>
+</body>
+
+</html>

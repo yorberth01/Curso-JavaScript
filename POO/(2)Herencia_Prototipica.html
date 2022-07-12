@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Curso JavaScript</title>
+</head>
+
+<body>
+  <h1>Fundamentos JavaScript</h1>
+
+  <script>
+
+    //HERENCIA PROTOTIPICA
+
+    function Animal(nombre, genero) {
+      //atributos
+      this.nombre = nombre;
+      this.genero = genero;
+    }
+    //metodos agregados al prototipo de la funcion constructora
+    Animal.prototype.sonar = function () {
+      console.log("hago sonido porque estoy vivo");
+    }
+    Animal.prototype.saludar = function () {
+      console.log(`hola me llamo ${this.nombre}`);
+    }
+
+
+    function perro(nombre, genero, tamano) {
+      this.super = Animal; //super manda a llamar el constructor del elemento de la clase padre
+      this.super(nombre, genero);
+      this.tamano = tamano;
+    }
+    //perro esta heredando de Animal
+    perro.prototype = new Animal();
+    perro.prototype.constructor = perro;
+
+    //sobre escritura del metododel prototipo  padre en el hijo
+    perro.prototype.sonar = function () {
+      console.log("soy un perro y mi sonido es un ladrido");
+    }
+
+    perro.prototype.ladrar = function () {
+      console.log("Guuuau Guuuau!!!");
+    }
+
+    const snoopy = new perro("snoopy", "macho", "mediano");
+    console.log(snoopy);
+
+    snoopy.sonar();
+    snoopy.ladrar();
+  </script>
+</body>
+
+</html>

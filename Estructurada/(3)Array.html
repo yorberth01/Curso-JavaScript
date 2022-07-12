@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Curso JavaScript</title>
+</head>
+
+<body>
+  <h1>Fundamentos JavaScript</h1>
+  <script>
+    //ARRAY
+    const a = [], b = [1, "hola", true, ["A", "B", "C"]];
+    console.log(a);
+    console.log(b);
+    console.log(b[2]);
+    console.log(b[3][2]);
+
+    const c = Array.of("Z", "Y", "X", 9, 8, 7);
+    console.log(c);
+
+    c.push(6);
+    console.log(c);
+    c.pop();
+    console.log(c);
+
+    c.forEach(function (elementos) {
+      console.log(elementos);
+    });
+
+    c.forEach(function (elementos, posicion) {
+      console.log(`<li id="${posicion}">${elementos}</li>`);
+
+    });
+
+    const d = Array(100).fill(false);
+    console.log(d);
+
+  </script>
+</body>
+
+</html>

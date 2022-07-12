@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Curso JavaScript</title>
+</head>
+
+<body>
+  <h1>POO JavaScript</h1>
+  <script>
+
+    //CLASES Y HERENCIAS---METODOS ESTATICOS, GET Y SET// se unieron los 2 videos
+    class Animal {//las clases no reciven parametros, los resive un constructor
+
+      constructor(nombre, genero) {//el constructor de una clase es un metodo especial que se ejecuta e el momento de crear objetos de este tipo
+        this.nombre = nombre;
+        this.genero = genero;
+      }
+      //metodos
+      sonar() {
+        console.log("hago sonido porque estoy vivo");
+      }
+      saludar() {
+        console.log(`hola me llamo ${this.nombre}`);
+      }
+    }
+
+
+    const mimi = new Animal("mimi", "hembra"), scooby = new Animal("scobby", "macho");
+
+    console.log(mimi);
+    mimi.saludar();
+    mimi.sonar();
+    console.log(scooby);
+    scooby.saludar();
+    scooby.sonar();
+
+    //clases heredadas de una clase padre
+    class Perro extends Animal {
+      constructor(nombre, genero, tamano) {
+        super(nombre, genero);//con el metodo super se manda a llamar el constructor de la clase padre
+        this.tamano = tamano;
+        this.raza = null;
+      }
+
+      sonar() {
+        console.log("soy un perro y mi sonido es un ladrido");
+      }
+
+      ladrar() {
+        console.log("Guuuau Guuuuau!!");
+      }
+
+      //Metodos estaticos Gettesr y Setters
+      //un metodo estatico se puede ejecutar sin nesecidad de instanciar la clase
+      static queEres() {
+        console.log("Los perros somos aimales mamiferos de la familia de los caninos y nos considera el mejor amigo del hombre");
+      }
+
+      //los setters y getters son metodos especiales que nos permiten establecer y obtener los valores de atributos de nuestras clases
+
+      get getRaza() {
+        return this.raza;
+      }
+
+      set setRaza(raza) {
+        this.raza = raza;
+      }
+    }
+    Perro.queEres();
+
+
+
+    const firulay = new Perro("firulay", "macho", "mediano");
+    console.log(firulay);
+
+    firulay.saludar();
+    firulay.sonar();
+    firulay.ladrar();
+
+    //los get y set se trabajn como si fuera propiedades no como  metodos
+    console.log(firulay.getRaza);
+    firulay.setRaza = "pitbull"
+    console.log(firulay.getRaza);
+  </script>
+</body>
+
+</html>

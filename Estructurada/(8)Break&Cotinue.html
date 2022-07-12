@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Curso JavaScript</title>
+</head>
+
+<body>
+  <h1>Fundamentos JavaScript</h1>
+  <script>
+    //BREAK & CONTINUE
+    const n = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
+
+    for (let i = 0; i < n.length; i++) {
+      if (i === 5) {
+        break;//rompe el ciclo y sale de la estructura de control
+      }
+      console.log("break " + n[i]);
+    }
+
+    for (let i = 0; i < n.length; i++) {
+      if (i === 5) {
+        continue//solo se salta esa condicio de la estructura de control y sigue hasta acabar
+      }
+      console.log("continue " + n[i]);
+    }
+
+  </script>
+</body>
+
+</html>

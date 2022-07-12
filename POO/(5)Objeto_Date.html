@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Curso JavaScript</title>
+</head>
+
+<body>
+  <h1>POO JavaScript</h1>
+  <script>
+    //OBJETO DATE
+
+    console.log(Date());
+
+    let fecha = new Date();
+    console.log(fecha);
+    console.log(fecha.getDate());//devuelve solo el dia del mes
+    console.log(fecha.getDay());//devuelve el dia de la semana en numero
+    console.log(fecha.getMonth());//devuelve el mes(postdata devuelve un numero menos al mes porque lo guerda en un arreglo)
+    console.log(fecha.getFullYear());//devuelve el año
+
+    console.log(fecha.getHours());
+    console.log(fecha.getMinutes());
+    console.log(fecha.getSeconds());
+    console.log(fecha.getUTCMilliseconds());
+
+    console.log(fecha.toString());
+    console.log(fecha.toDateString());
+    console.log(fecha.toLocaleString());
+    console.log(fecha.toLocaleDateString());
+    console.log(fecha.toLocaleTimeString());
+
+    console.log(fecha.getTimezoneOffset());
+
+
+    console.log(Date.now());
+
+    let cumpleanos = new Date(1999, 3, 21);
+    console.log(cumpleanos);
+  </script>
+</body>
+
+</html>

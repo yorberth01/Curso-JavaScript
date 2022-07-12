@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+
+    let a = "jhbjnsdc", b = "1";
+    b = a * 58;
+    console.log(b);
+    if (a) {
+      console.log("OK");
+
+    }
+    else {
+      console.log("NO");
+
+    }
+
+
+    numero = "1234";
+    numero = Number(numero);
+
+    console.log(numero);
+
+
+    let objeto = {
+      nombre: "yorberth",
+      edad: 12
+    }
+    console.log(objeto);
+    objeto.sexo = "masculino";
+    console.log(objeto);
+
+
+    let colores = ["azul", "blanco", "negro"];
+    console.log(colores);
+    colores.push("verde");
+    console.log(colores);
+
+    let lorem = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias at assumenda repellendus eveniet natus necessitatibus, voluptates temporibus consequuntur amet eligendi, perferendis, placeat architecto. Necessitatibus sapiente aspernatur odio rem cumque officiis!"
+    console.log(lorem.length);//propiedad length para ver cuantos caracteres tiene 
+
+    console.log(objeto, colores, lorem.includes("amet"), lorem.split(" "), lorem.split(","));//atributo split sirve para convertir u texto en un array
+
+
+
+    function UnaFuncionQueDevuelveValor() {
+      console.log("uno");
+      console.log("dos");
+      console.log("tres");
+      return console.log("la funcion a retornado una cadena de texto");
+    }
+    UnaFuncionQueDevuelveValor();
+
+    const funcionExpresada = function () {
+      console.log("esto es una funcion expresada, es decir que una funcion que se ha asignado como valor a una variable si invocamos esta funcion antes de su definicion javascript nos dira.. Cannot access 'funcionExpresada' before initialization")
+    }
+
+    funcionExpresada();
+    const c = Array.of("Z", "Y", "X", 9, 8, 7);
+
+    c.forEach(function (elementos) {
+      console.log(elementos);
+
+    });
+
+    c.forEach(function (elementos, posicion) {
+      console.log(`<li id="${posicion}">${elementos}</li>`);
+
+    });
+
+
+    const yorberth = {
+      nombre: "yorberth",
+      apellido: "quiroz",
+      edad: 21,
+      pasatiempo: ["hacer ejercicio", "comer", "jugar poker"],
+      contacto: {
+        correo: "yorberth@gmail.com",
+        tlf: "04264108507",
+      },
+      saludar: function () {
+        console.log("Hola :)")
+      },
+      decirMiNombre: function () {
+        console.log(`Hola mi nombre es: ${this.nombre} ${this.apellido} y tengo ${this.edad} años y mi correo es: ${this.contacto.correo}`)
+      }
+    }
+    yorberth.decirMiNombre();
+
+
+    let edad = 17;
+
+    if (edad >= 18) {
+      console.log("Usted es mayor de edad")
+    } else {
+      console.log("Usted es menor de edad")
+    }
+
+
+
+
+    const persona = {
+      nombres: "yorberth",
+      apellidos: "quiroz",
+      edades: 21
+    }
+    for (const propiedad in persona) { //forin especial para los objetos
+      console.log(propiedad);
+    }
+    for (const propiedad in persona) { //forin especial para los objetos
+      console.log(`Key: ${propiedad} values: ${persona[propiedad]}`);
+    }
+
+    let cadena = "Hola soy yorberth"
+    for (const caracteres of cadena) {//forof sirve para los array y cadena de caracteres
+      console.log(caracteres);
+    }
+
+
+
+    try {
+      console.log("prueba de eror");
+    } catch (error) {
+      console.log(error);
+    }
+
+
+
+
+
+    try {
+      let numero = "y";
+      if (isNaN(numero)) {//la funcion NaN not a number evalua si la variable es un numero o no si si no es arroja un false
+        throw new Error("El caracter introducido no es un numero");//throw lanza un neuvo mensaje Error es un metodo
+      }
+      console.log(numero * numero);
+    } catch (error) {
+      console.log(`se produjo el siguiente error: ${error}`);
+    }
+
+    let nombre = "rocy", edad1 = 15;
+    const perro = {
+      nombre,
+      edad1
+
+    }
+    console.log(perro);
+
+
+
+
+
+
+
+
+    function sumar(a, b, ...c) {//los 3 puntos significa que no se sabe cuantos parametros se van a pasar
+      let resultado = a + b;
+
+      c.forEach(function (n) {
+        resultado += n;
+      });
+      return resultado;
+
+    }
+    console.log(sumar(1, 2));
+    console.log(sumar(1, 2, 3, 4, 5, 6, 7, 8));
+
+
+
+
+
+
+
+
+
+    console.log(Date());
+
+
+    //ALERT, CONFIRM, PROMPT
+
+    console.log(window);
+    // window.alert("Esto es una alerta");
+    //window.confirm("Esto es una confirmacion");
+    //window.prompt("Esto es un prompt y le permite al usuario insertar un valor");
+    let alerta = alert("Esto es una alerta"),
+      confirmacion = confirm("Esto es una confirmacion"),
+      aviso = prompt("Esto es un aviso");
+
+    console.log(alerta);
+    console.log(confirmacion);
+    console.log(aviso);
+    if (confirmacion) {
+      console.info("Si funciona TRUE");
+    } else {
+      console.info("Si funciona FALSE");
+    }
+
+
+
+
+
+    function calcularEdad(fecha_nacimiento) {
+      var hoy = new Date();
+      var cumpleanos = new Date(fecha_nacimiento);
+      var edad = hoy.getFullYear() - cumpleanos.getFullYear();
+      var m = hoy.getMonth() - cumpleanos.getMonth();
+      if (m < 0 || (m === 0 && hoy.getDate() < cumpleanos.getDate())) {
+        edad--;
+      }
+      return edad;
+    }
+
+    var edad2 = calcularEdad("2010/08/10");
+    if (edad2 >= 18) {
+      alert("Eres mayor de edad :D ");
+    } else {
+      alert("Eres menor de edad :( ");
+    }
+  </script>
+
+</body>
+
+</html>

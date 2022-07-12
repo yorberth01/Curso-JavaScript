@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Curso JavaScript</title>
+</head>
+
+<body>
+  <h1>Fundamentos JavaScript</h1>
+  <script>
+    //OPERADORES
+
+    //CONDICIONALES
+
+    let edad = 21;
+
+    if (edad >= 18) {
+      console.log("Usted es mayor de edad")
+    } else {
+      console.log("Usted es menor de edad")
+    }
+
+    hora = 16;
+
+    if (hora >= 0 && hora <= 5) {
+      console.log("Dejame dormir");
+    } else if (hora >= 6 && hora <= 11) {
+      console.log("Buenos dias");
+    } else if (hora >= 12 && hora <= 18) {
+      console.log("Buenos tardes");
+    } else {
+      console.log("Buenas noches");
+    }
+
+    //operador ternario (condicion)?verdadero : falso
+    //se puede asi
+    let eresMayor = (edad >= 18) ? "Eres mayor de edad" : "Eres menor de edad";
+    //y asi
+    let eresMenor = (edad <= 17)
+      ? "Eres menor de edad"
+      : "Eres mayor de edad";
+
+    console.log(eresMayor);
+    console.log(eresMenor);
+
+    //switch-case
+    let dia = 3;
+
+    switch (dia) {
+      case 0:
+        console.log("Domingo");
+        break;
+      case 1:
+        console.log("Lunes");
+        break;
+      case 2:
+        console.log("Martes");
+        break;
+      case 3:
+        console.log("Miercoles");
+        break;
+      case 4:
+        console.log("Jueves");
+        break;
+      case 5:
+        console.log("Viernes");
+        break;
+      case 1:
+        console.log("Sabado");
+        break;
+      default:
+        console.log("El dia no existe");
+        break;
+    }
+  </script>
+</body>
+
+</html>

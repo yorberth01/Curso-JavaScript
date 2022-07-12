@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Curso JavaScript</title>
+</head>
+
+<body>
+  <h1>POO JavaScript</h1>
+  <script>
+    //OBJETOS CONSOLES
+    console.log(console);
+    console.error("esto es un error");
+    console.warn("esto es un aviso");
+    console.info("esto es un mensaje informativo");
+    console.log("log es un registro de lo que a pasado en nuestra aplicacion");
+
+    let nombre = "yorberth", apellido = "quiroz", edad = 21;
+    console.log(nombre, apellido, edad);
+    console.log(`hola mi nombre es: ${nombre} y mi apellido es: ${apellido} y ademas tengo: ${edad} años de edad`);
+
+    console.log(`hola mi nombre es: %s y mi apellido es: %s y ademas tengo: %d años de edad`, nombre, apellido, edad);
+
+    console.clear(); //para limpiar la consola
+    console.log(window);
+    console.log(document);
+    console.dir(window);
+    console.dir(document);
+
+    console.clear(); //para limpiar la consola
+
+    console.group("Listo de deportes favoritos");
+    console.log("beisbol");
+    console.log("basetball");
+    console.log("fotbol");
+    console.log("tenis de mesa");
+    console.groupEnd();
+
+    console.clear(); //para limpiar la consola
+    console.log(console);
+    console.table(Object.entries(console).sort());//table: sirve para formar una tabla con el contenido que le pases. sort: sirve para ordenar de forma asendente
+
+    const numeros = [1, 2, 3, 4, 5], vocales = ["a", "e", "i", "o", "u"];
+    console.table(numeros);
+    console.table(vocales);
+
+    const perro = {
+      nombre: "bonny",
+      raza: "boxer",
+      color: "marron"
+    }
+
+    console.table(perro);
+    console.clear(); //para limpiar la consola
+
+    console.time("cuento tiempo tarda mi codigo");//sirve para medir cuanto tiempo tarda el codigo en ejecutarse
+    const arreglo = Array(1000000);
+
+    for (let i = 0; i < arreglo.length; i++) {
+      arreglo[i] = i;
+    }
+    console.timeEnd("cuento tiempo tarda mi codigo");
+    //console.log(arreglo);
+
+    console.clear(); //para limpiar la consola
+
+    for (let i = 0; i <= 100; i++) {
+      console.count("codigo for");//para saber cuantas veces se repite algo
+      console.log(i);
+    }
+    console.clear(); //para limpiar la consola
+
+    let x = 3, y = 2, pruebaXY = "se espera que Y siempre sea mayor que X";
+
+    console.assert(x < y, (x, y, pruebaXY));// sirve para hacer prubas de codigo
+    console.clear(); //para limpiar la consola
+
+    //OBJETO MATH
+    console.log(Math);
+    console.log(Math.PI);
+    console.log(Math.abs(-7.8));//numero absoluto
+    console.log(Math.ceil(7.1));//redondea los numeros al numero mayor
+    console.log(Math.floor(7.8));//redondea los numeros al numero menor
+    console.log(Math.round(7.5));//este si redondea al numero mas cercano 
+    console.log(Math.sqrt(81));//rais cuadrada
+    console.log(Math.pow(2, 5)); //para elevar un numero el primero es la base, el otro el exponente
+    console.log(Math.sign(-5, 6));//calcula si el numero es - o +
+    console.log(Math.random());//numero aleatorio del 0 al 1
+    console.log(Math.random() * 1000);//numero aleatorio hasta el numero que quiero pero con decimales
+    console.log(Math.round(Math.random() * 1000));//de esta manera tengo un numero aleatorio sin decimales
+    console.clear(); //para limpiar la consola
+  </script>
+  </script>
+</body>
+
+</html>
